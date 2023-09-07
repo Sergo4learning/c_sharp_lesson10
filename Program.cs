@@ -32,19 +32,26 @@ string[] get_3_letter_words_array (int num, string[] words_array, ref int num2)
 }
 void output_array(string[] arr, int num)
 {
-    if (num==1)
+    if (num==0)
     {
-        Console.Write("["+ quote);        
-        Console.WriteLine(arr[num-1]+ quote+"]");        
+        Console.WriteLine("[]");        
     }
     else
     {
-    Console.Write("[");    
-    for (int i=1; i<num;i++)
-    {
-        Console.Write(quote+arr[i-1]+ quote+", ");
-    }
-    Console.WriteLine(quote+arr[num-1]+ quote+"]");    
+        if (num==1)
+        {
+            Console.Write("["+ quote);        
+            Console.WriteLine(arr[num-1]+ quote+"]");        
+        }
+        else    
+        {
+        Console.Write("[");    
+        for (int i=1; i<num;i++)
+        {
+            Console.Write(quote+arr[i-1]+ quote+", ");
+        }
+        Console.WriteLine(quote+arr[num-1]+ quote+"]");    
+        }
     }    
 }
 int num2=1;
